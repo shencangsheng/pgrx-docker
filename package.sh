@@ -15,8 +15,6 @@ get_pg_config() {
     fi
 }
 
-cargo install cargo-pgrx --version ${PGRX_VERSION} --locked
-
 config_value=$(get_pg_config $PSQL_VERSION)
 
 cargo pgrx package -c $config_value
