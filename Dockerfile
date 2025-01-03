@@ -16,7 +16,7 @@ RUN apt-get update && \
 
 RUN cargo install cargo-pgrx --version ${PGRX_VERSION} --locked
 
-RUN cargo pgrx init ${PSQL_SUPPORT_VERSION:+--pg$PSQL_SUPPORT_VERSION}
+RUN cargo pgrx init ${PSQL_SUPPORT_VERSION:+--pg$PSQL_SUPPORT_VERSION=download}
 
 WORKDIR /usr/src/app
 
