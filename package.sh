@@ -2,7 +2,7 @@
 
 get_pg_config() {
     local version=$1
-    local config_file="/root/.pgrx/config.toml"
+    local config_file="/home/pgrx/.pgrx/config.toml"
     local key="pg${version}"
 
     local value=$(grep "^${key}" "${config_file}" | awk -F'=' '{print $2}' | tr -d ' "')
