@@ -22,12 +22,12 @@ ls target/release/{plugin_name}-{postgresql_version}/.pgrx/{psql_version}/pgrx-i
 docker build --build-arg PSQL_SUPPORT_VERSION=13 -t example/pgrx:13 .
 ```
 
-| Parameter              | Description                                                                     |
-| ---------------------- | ------------------------------------------------------------------------------- |
-| `RUST_TAG`             | The version tag for Rust, defaulting to `1.83.0-bullseye`                       |
-| `PSQL_SUPPORT_VERSION` | The supported version of PostgreSQL (optional: 12, 13, 14, 15, 16; default: 13) |
-| `PGRX_VERSION`         | The version of pgrx, defaulting to `0.11.4`                                     |
-| `CMD`                  | The command to execute, defaulting to `/usr/bin/pgrx-package`                   |
+| Parameter              | Description                                                                                                 |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `RUST_TAG`             | The version tag for Rust, defaulting to `1.83.0-bullseye`                                                   |
+| `PSQL_SUPPORT_VERSION` | The supported version of PostgreSQL (optional: 12, 13, 14, 15, 16; if not specified, supports all versions) |
+| `PGRX_VERSION`         | The version of pgrx, defaulting to `0.11.4`                                                                 |
+| `CMD`                  | The command to execute, defaulting to `/usr/bin/pgrx-package`                                               |
 
 ## 👍 Libraries Used
 
